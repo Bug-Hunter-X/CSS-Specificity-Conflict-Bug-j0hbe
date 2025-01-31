@@ -1,0 +1,18 @@
+The following CSS code snippet demonstrates an issue where a specificity conflict causes unexpected styling:
+
+```css
+#container {
+  color: blue;
+}
+
+.element {
+  color: red;
+}
+
+#container .element {
+  color: green; /* This style is not applied due to specificity conflict */
+}
+
+```
+
+The intended behavior is for `.element` within `#container` to have a green color. However, due to the higher specificity of the `#container` rule, the blue color is applied instead.
